@@ -14,14 +14,14 @@ export default function Header() {
         {/* left */}
         <div className="cursor-pointer h-24 w-24 relative hidden lg:inline-grid">
           <Image
-            src="https://fontmeme.com/images/instagram-new-logo.png"
+            src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
             layout="fill"
             className="object-contain"
           />
         </div>
         <div className="cursor-pointer h-24 w-10 relative lg:hidden">
           <Image
-            src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg"
+            src="https://images.unsplash.com/photo-1611606063065-ee7946f0787a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
             layout="fill"
             className="object-contain"
           />

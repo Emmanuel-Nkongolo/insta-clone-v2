@@ -17,7 +17,7 @@ export default function signin({ providers }) {
               <img
                 className="w-32 object-cover"
                 src="https://www.nhancedigital.com/wp-content/uploads/2021/01/social-media.png"
-                alt=""
+                alt="logo-2"
               />
               <p className="text-sm italic my-10 text-center">
                 This app was created by Emmanuel Nk for learning purposes.

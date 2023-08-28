@@ -48,7 +48,7 @@ export default function Header() {
               <img
                 onClick={signOut}
                 src={session.user.image}
-                alt="user-image"
+                alt="no user-image"
                 className="h-10 rounded-full cursor-pointer"
               />
             </>

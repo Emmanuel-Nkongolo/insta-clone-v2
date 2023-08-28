@@ -9,7 +9,7 @@ export default function MiniProfile() {
       <div className="flex-1 ml-4">
         <h2 className="font-bold">codewithme</h2>
         <h3 className="font-light text-sm text-gray-400">
-          Welcome to instagram-Clone
+          Welcome to Social Media-Clone
         </h3>
       </div>
       <button className="font-semibold text-blue-400 text-sm">Sign out</button>

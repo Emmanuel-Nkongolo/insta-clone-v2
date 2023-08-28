@@ -1,13 +1,12 @@
-// "use client"
 import Image from "next/image"
 import { BiSearch } from "react-icons/bi"
 import { LiaPlusCircleSolid } from "react-icons/lia"
 import { AiFillHome } from "react-icons/ai"
-// import { useSession } from "next-auth/react"
+import { useSession, signIn, signOut } from "next-auth/react"
 
 export default function Header() {
-  // const { data: session } = useSession()
-  // console.log(session)
+  const { data: session } = useSession()
+  console.log(session)
   return (
     <div className="shadow-sm border-b sticky top-0 bg-white z-30">
       <div className="flex items-center justify-between max-w-6xl mx-4 xl:mx-auto">
@@ -43,12 +42,19 @@ export default function Header() {
 
         <div className="flex space-x-4 items-center">
           <AiFillHome className="hidden md:inline-flex cursor-pointer hover:scale-125 transition-transform duration-200 ease-out" />
-          <LiaPlusCircleSolid className="cursor-pointer hover:scale-125 transition-transform duration-200 ease-out" />
-          <img
-            src="https://media.licdn.com/dms/image/D4D03AQGSqpT7VnnRWg/profile-displayphoto-shrink_800_800/0/1684913576511?e=2147483647&v=beta&t=byccSYjoSqZwNnCIwpOWR-pM8OgWCi6k3upFU0zqMMc"
-            alt="user-image"
-            className="h-10 rounded-full cursor-pointer"
-          />
+          {session ? (
+            <>
+              <LiaPlusCircleSolid className="cursor-pointer hover:scale-125 transition-transform duration-200 ease-out" />
+              <img
+                onClick={signOut}
+                src={session.user.image}
+                alt="user-image"
+                className="h-10 rounded-full cursor-pointer"
+              />
+            </>
+          ) : (
+            <button onClick={signIn}>Sign in</button>
+          )}
         </div>
       </div>
     </div>

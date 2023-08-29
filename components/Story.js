@@ -8,7 +8,9 @@ export default function Story({ img, username, isUser }) {
         src={img}
         alt={username}
       />
-      {isUser && <FiPlus className="h-6 absolute top-4 left-5 text-white" />}
+      {isUser && (
+        <FiPlus className="h-6 w-6 absolute top-4 left-4 text-white" />
+      )}
       <p className="text-xs w-14 truncate">{username}</p>
     </div>
   )
